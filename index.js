@@ -32,9 +32,16 @@ const navMenu = document.querySelector('nav');
 hamburger.addEventListener('click', handleHamburgerClick);
 const navLinks = document.querySelectorAll('.nav-link');
 
-navLinks.forEach(link => {
-  link.addEventListener('click', handleHamburgerClick);
-})
+// Only handle clicks on links inside the <nav> when it's open
+document.addEventListener('click', function(e) {
+  const isNavOpen = navMenu.classList.contains('open');
+  const clickedNavLink = e.target.closest('nav a');
+
+  if (isNavOpen && clickedNavLink) {
+    handleHamburgerClick(); // Only close the nav when clicking a nav link
+  }
+});
+
 
 
 function handleHamburgerClick(){

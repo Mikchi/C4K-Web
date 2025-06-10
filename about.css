@@ -211,6 +211,7 @@ ul{
 .part1-text h2{
     margin: 0;
     margin-right: 29%;
+    
 }
 .part1-button{
     display: flex;
@@ -315,4 +316,57 @@ button:active {
 }
 .hamburger:active {
   transform: scale(1);
+}
+
+@media screen and (min-width: 600px){
+    h1{
+        font-size: 55px;
+    }
+    .mobile-only {
+        display: none;
+    }
+    nav {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+    nav a{
+        font-size: 25px;
+    }
+    nav button{
+        font-size: 25px;
+    }
+    p {
+        font-size: 25px;
+        line-height: 2rem;
+    }
+    h2{
+        font-size: 30px;
+        padding-inline: 100px;
+    }
+    button{
+        font-size: 28px;
+    }
+    ul{
+        font-size: 30px;
+    }
+    .about2Img{
+        width: 500px;
+    }
+    #about2 {
+        margin-inline: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .about3-content img, .about3-content2 img,.about3-content3 img{
+        width: 70px;
+    }
+    .part1-text h2, .part2-text h2,.part3-text h2{
+        padding-left: 15px;
+    }
+
+}
+
+html {
+  scroll-behavior: smooth;
 }

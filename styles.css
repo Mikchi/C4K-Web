@@ -13,6 +13,7 @@
     src: url('fonts/bubbleboddy_neue/sagite/Sagite-woo8x.otf');
 }
 
+
 body {
     margin: 0;
     max-width: 1000px;
@@ -185,21 +186,35 @@ nav.open {
 
 #about {
     text-align:center;
-    padding: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    /* padding-inline: 20px; */
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .about-content{
     margin: auto;
-    max-width: 750px;
+    max-width: 930px;
+}
+.about-main{
+    display: flex;
+    gap: 50px;
+    padding-bottom: 5px;
+}
+.aboutImage {
+    display: none;
 }
 
 .about-title {
-    width:200px;
+    max-width:200px;
 }
 #about p{
     margin-top: 9.5px;
     margin-bottom: 15px;
+    max-width: 600px;
+    margin-inline: 30px;
+}
+.aboutText {
+    text-align: center;
+    margin: auto;
 }
 
 /* END ABOUT SECTION */
@@ -317,9 +332,6 @@ h3 {
     max-width: 100vw;
     align-items: center;
 }
-.img-text{
-
-}
 #join h1{
     font-size: 24px;
 }
@@ -435,7 +447,13 @@ button:active {
         font-size: 55px;
     }
     #join h1{
-        font-size: 50px;
+        font-size: 60px;
+    }
+    #join p{
+        font-size: 35px;
+    }
+    #join h2{
+        font-size: 40px;
     }
     p {
         font-size: 25px;
@@ -458,8 +476,25 @@ button:active {
     nav button{
         font-size: 25px;
     }
-    
-    
+    .about-title{
+        display: inline;
+        width: 100%;         /* Forces image to fill container */
+        max-width: 200px;   /* Doesn't let it go past 1000px */
+        height: auto;
+    }   
+    #about{
+        padding-top: 80px;
+    padding-bottom: 80px;
+    }
 }
-
-
+@media screen and (min-width: 848px){
+.aboutImage {
+      display: block;
+    }
+.about-title{
+    max-width:1000px;
+}
+}
+html {
+  scroll-behavior: smooth;
+}
