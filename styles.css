@@ -1,0 +1,462 @@
+@font-face{
+    font-family: 'Bubblebody Neue Regular';
+    src: url('fonts/bubbleboddy_neue/bubbleboddyneue-regular\ trial.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Bubblebody Neue Bold';
+    src: url('fonts/bubbleboddy_neue/BubbleboddyNeue-Bold\ Trial.ttf');
+}
+
+@font-face{
+    font-family: 'Sagite';
+    src: url('fonts/bubbleboddy_neue/sagite/Sagite-woo8x.otf');
+}
+
+body {
+    margin: 0;
+    max-width: 1000px;
+    margin: auto;
+}
+
+button {
+    font-family: 'Bubblebody Neue Bold';
+    background-color: #ea51a1;
+    border: #ea51a1 solid 5px;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+h1{
+    margin: 0;
+    font-size: 32.5px;
+    font-family: 'Sagite';
+    font-weight:500;
+}
+
+h2 {
+    font-family: 'Bubblebody Neue Regular';
+}
+
+
+p {
+    font-family: 'Bubblebody Neue Regular';
+    font-size: 13.4px;
+    line-height: 1.1rem;
+}
+
+.font-white{
+    color: white;
+    
+}
+
+.font-pink{
+    color: #ea51a1;
+}
+.blue-bold{
+    color:#46bbfa;
+    font-family: 'Bubblebody Neue Bold';
+    letter-spacing: 0.12em;
+}
+.dark-blue{
+    color: #4ca0ff;
+    font-weight: 500;
+
+}
+
+/* HEADER SECTION */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-inline: 9px;
+}
+
+.logo {
+    z-index: 15;
+}
+.top-button-container{
+    position: absolute;
+    width: 96.7%;
+    text-align: center;
+}
+.header-button{
+    margin: auto;
+  
+}
+
+nav.closed{
+    animation: fadeOutFromRight 0.1s ease-out forwards;
+    display: none;
+}
+
+nav.open{
+    display: block;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    display: flex;
+    /* align-content: center; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    animation: fadeInFromRight 0.6s ease-out forwards;
+}
+nav a{
+    position: relative;
+    text-decoration: none;
+    color: #ea51a1;
+    padding-bottom: 6px; 
+    font-size: 40px;
+    font-family: 'Bubblebody Neue Regular' 
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(45deg,#ff6bad, #ffafd0);
+    bottom: 0;
+    left: 0;
+    border-radius: 70px;
+    transition: width .3s;
+}
+
+nav a:hover::after{
+    width: 100%
+}
+nav button{
+    font-size: 40px;
+    padding-inline:20px;
+}
+
+nav {
+    
+    display: none;
+}
+
+nav.open {
+    display: absolute;
+}
+
+.hamburger {
+    margin-right: 9px;
+    z-index: 15;
+    transition: all 0.3s ease;
+}
+
+/* END HEADER SECTION */
+
+
+
+/* MAIN EVENT SECTION */
+
+#main-event{
+    margin-inline: 9px;
+    text-align: center;
+}
+.section-background{
+    background: linear-gradient(#afd5ff, #72b4ff);
+    border-radius: 10px;
+    padding: 23px 30px;
+    text-align: center;
+}
+.section-background p{
+    margin-top: 4px;
+    margin-bottom: 11px;
+}
+.main-content{
+    margin: auto;
+    max-width: 750px;
+}
+
+/* END MAIN EVENT SECTION */
+
+
+/* ABOUT SECTION */
+
+#about {
+    text-align:center;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.about-content{
+    margin: auto;
+    max-width: 750px;
+}
+
+.about-title {
+    width:200px;
+}
+#about p{
+    margin-top: 9.5px;
+    margin-bottom: 15px;
+}
+
+/* END ABOUT SECTION */
+
+
+/* WORKS SECTION */
+#works{
+    margin-inline: 9px;
+}
+#works .section-background{
+    padding-inline: 0;
+}
+#works h1{
+    color: white;
+}
+.swiper-slide{
+    margin-bottom: 28px;
+}
+.card-list{
+    list-style: none;
+}
+.card-image {
+    width: 200px;
+    aspect-ratio: 5/6;
+    object-fit: cover;
+    border-radius:7px;
+}
+.card-icon {
+   width: 43px; 
+   aspect-ratio: 1/1;
+   margin-right: 8px;
+}
+.card-description{
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+.card-list{
+    /* display: flex;
+    padding: 0;
+    margin: auto;
+    padding-bottom: 25px; */
+    display: flex;
+    /* gap: 20px; */
+    scroll-snap-type: x mandatory;
+    /* padding: 0 15px; */
+    width: max-content;
+    padding-inline-start: 0;
+}
+
+
+.card-item {
+    background-color: white;
+    border-radius: 8px;
+    padding-top: 11.5px;
+    /* margin-left: 50px; */
+    max-width: 223px; 
+    margin: auto;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+     
+}
+
+h3 {
+    font-family: 'Bubblebody Neue Regular';
+    color: #ea51a1;
+}
+
+
+#works h1{
+   
+}
+
+#works .container{
+    position: relative;
+}
+.swiper-buttons{
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    display: none;
+}
+.swiper-pagination{
+    /* bottom: 0 !important; */
+}
+
+/* .card-list .card-item {
+    user-select: none;
+} */
+
+/* END OF WORKS SECTION */
+
+
+/* JOIN SECTION */
+#join{
+    padding-inline: 20px;
+    padding-block: 30px;
+}
+#join img{
+    max-width: 100%;
+    border-radius:14px;
+}
+.img-card{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    max-width: 100vw;
+    align-items: center;
+}
+.img-text{
+
+}
+#join h1{
+    font-size: 24px;
+}
+#join h2{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+#join p{
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.join-button{
+    margin-top: 16px;
+    text-align: center;
+}
+
+/* END OF JOIN SECTION */
+
+/* SCHEDULE SECTION */
+#schedule {
+    background: linear-gradient(#afd5ff, #72b4ff);
+    border-radius: 10px;
+    padding: 23px 20px;
+    margin-inline: 9px;
+    margin-bottom: 10px;
+}
+#schedule h2, p{
+    margin-block: 5px;
+}
+#schedule img{
+    width: 100%;
+}
+.schedule-title{
+    text-align: center;
+}
+
+.event-list{
+    display: flex;
+    flex-direction: column;
+}
+.event{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+    align-items: center;
+}
+.event h3{
+    font-weight:500;
+    margin-block: 5px;
+}
+
+
+
+
+/* animation */
+@keyframes fadeInFromRight {
+from {
+    opacity: 0;
+    transform: translateX(100px); /* Start 100px off-screen to the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* scroll animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+#main-event, #join, #schedule, #works, #about {
+  animation: fadeIn 1s ease-in; /* duration added */
+  animation-fill-mode: both;   /* makes sure it stays visible after animating */
+}
+
+button:hover {
+  background-color: #ff3da3;
+  border-color: #ff3da3;
+  box-shadow: 0px 10px 20px #b45587;
+  transform: translateY(-3px);
+  transform: scale(1.2);
+}
+
+button:active {
+  transform: translateY(-1px);
+  transform: scale(1);
+}
+
+.hamburger:hover{
+  transform: scale(1.2);
+}
+.hamburger:active {
+  transform: scale(1);
+}
+
+
+/* end of animations */
+
+/* desktop sizing */
+
+@media screen and (min-width: 600px) {
+    h1{
+        font-size: 55px;
+    }
+    p {
+        font-size: 25px;
+        line-height: 2rem;
+    }
+    button{
+        font-size: 28px;
+    }
+    .mobile-only{
+        display: none;
+    }
+    nav {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+    nav a{
+        font-size: 25px;
+    }
+    nav button{
+        font-size: 25px;
+    }
+    
+    
+}
+
+
