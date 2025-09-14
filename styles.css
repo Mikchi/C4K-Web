@@ -246,6 +246,7 @@ nav.open {
    width: 43px; 
    aspect-ratio: 1/1;
    margin-right: 8px;
+   border-radius: 50%;
 }
 .card-description{
     display: flex;
