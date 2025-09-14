@@ -385,6 +385,14 @@ h3 {
     font-weight:500;
     margin-block: 5px;
 }
+.event-icon {
+    height: 150px;
+    border-radius: 50px;
+}
+.event img {
+    margin-bottom: 10px; /* pushes the image away from the text */
+}
+
 
 
 
