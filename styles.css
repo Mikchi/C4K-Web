@@ -178,6 +178,9 @@ nav.open {
     margin: auto;
     max-width: 750px;
 }
+.linkTreeQRCode{
+    height: 250px;
+}
 
 /* END MAIN EVENT SECTION */
 
